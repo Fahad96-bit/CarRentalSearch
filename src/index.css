@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dollar-red: #e31a37;
+  --dollar-red-hover: #c0152d;
+}
+
+.text-dollar-red {
+  color: var(--dollar-red);
+}
+
+.hover\:text-dollar-red:hover {
+  color: var(--dollar-red);
+}
+
+.bg-dollar-red {
+  background-color: var(--dollar-red);
+}
+
+.hover\:bg-dollar-red:hover {
+  background-color: var(--dollar-red-hover);
+}
+
+.border-dollar-red {
+  border-color: var(--dollar-red);
+}
+
+.focus\:ring-dollar-red:focus {
+  --tw-ring-color: var(--dollar-red);
+  box-shadow: 0 0 0 2px var(--dollar-red);
+}
