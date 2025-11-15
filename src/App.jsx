@@ -1,13 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { SearchProvider } from "./context/SearchContext.jsx"
+import QueryProvider from "./providers/QueryProvider"
 import Navbar from "./components/shared/Navbar"
 import TabsSection from "./features/search/TabsSection"
 import VehicleListing from "./features/vehicle-listing/VehicleListing"
 
 const App = () => {
   return (
-    <SearchProvider>
-      <BrowserRouter>
+    <QueryProvider>
+      <SearchProvider>
+        <BrowserRouter>
         <Routes>
           <Route
             path="/"
@@ -29,7 +31,8 @@ const App = () => {
           />
         </Routes>
       </BrowserRouter>
-    </SearchProvider>
+      </SearchProvider>
+    </QueryProvider>
   )
 }
 
